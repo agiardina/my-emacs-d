@@ -1,0 +1,16 @@
+(add-to-list 'load-path "~/.emacs.d/tomorrow-theme")
+(setq-default line-spacing 4)
+(set-face-attribute 'default nil :height 140)
+(load "tomorrow-night-eighties-theme.el")
+(load-theme 'tomorrow-night-eighties t)
+
+(add-hook 'text-mode-hook
+	  (lambda ()
+	    (set-face-attribute 'variable-pitch nil :family "Spectral" :height 200 :weight 'ultra-light)
+	    (set-face-attribute 'fixed-pitch nil :family "DejaVu Sans Mono" :height 140)
+	    (set-face-attribute 'default nil :family "DejaVu Sans Mono" :height 140)	    
+	    (visual-line-mode)
+	    (variable-pitch-mode)
+	    (setq org-hide-emphasis-markers t)
+	    ;(load-theme 'modus-operandi t)
+	    ))
